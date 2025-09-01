@@ -1,8 +1,15 @@
 import './App.css'
+import Dashboard from './Pages/Dasboard'
 import Logo from './Utils/Logo'
 import Navbar from './Utils/Navbar'
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [expenses, setExpenses] = useState(loadExpenses());
+
+  useEffect(() => {
+    saveExpenses(expenses);
+  }, [expenses]);
   
   return (
     <>
@@ -13,6 +20,7 @@ function App() {
         {/* Main content goes here */}
         <h1 className="text-4xl font-bold text-center mt-10">Welcome to the Dashboard</h1>
         <Navbar />        
+        
     </div>
     </div>
             
