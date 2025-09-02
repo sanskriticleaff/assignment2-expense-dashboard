@@ -1,4 +1,4 @@
-// src/components/ExpenseForm.jsx
+
 import { useState, useEffect } from "react";
 
 export default function ExpenseForm({ onSave, editingExpense }) {
