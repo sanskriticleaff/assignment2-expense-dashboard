@@ -1,5 +1,5 @@
 import React from 'react'
-export default function Dashboard({ expenses }) {
+ function Dashboard({ expenses }) {
   const total = expenses.reduce((sum, e) => sum + Number(e.amount), 0);
 
   const categories = expenses.reduce((acc, e) => {
